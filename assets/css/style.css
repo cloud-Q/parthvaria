@@ -30,6 +30,21 @@ header{
 .menuItems{
     margin-left: 5%;
 }
+
+.menuItems, .footerMenuItems, .login{
+    &::after{
+        content: "";
+        width: 0%;
+        height: 2px;
+        margin: 2px 0;
+        background-color: #FB8E0B;
+        display: block;
+        transition: 0.3s;
+    }
+    &:hover::after{
+        width:100%;
+    }
+}
 .menu > a{
     color: black;
 }
@@ -52,12 +67,43 @@ header{
     font-size: 0.798rem;
     margin-left: 5px;
     border-radius: 5px;
-    
+    cursor: pointer;
 }
 
 .heroSection{
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 50% auto;
+    justify-content: center;
+    align-items: center;
+}
+.reverseSection{
+    margin-top: 2%;
+    grid-template-columns: 60% auto;
+    padding: 2%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+
+}
+@media (max-width:500px){
+    .heroSection{
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    .heroContent{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 60vw;
+        position: relative;
+        left: -20px;
+    }
+    .heroImage{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .buisnessChatImage{
+        position: relative;
+        left: -30px;
+    }
 }
 
 .heroContent{
@@ -82,6 +128,7 @@ header{
 
 
 #startChattingButton{
+    cursor: pointer;
     background-color: orange;
     color: white;
     display: flex;
@@ -117,11 +164,29 @@ header{
     margin: 10px;
     font-size: 1.5rem;
     font-weight: bolder;
+    text-align: center;
 }
 
 .featureBlocks{
     display: flex;
     flex-direction: row;
+    margin: 0 3% 0 3%;
+}
+
+@media (max-width:610px){
+    .features > .featureBlocks{
+        display: flex;
+        flex-direction: column;
+        /* margin: 0 3% 0 3%; */
+    }
+    
+}
+.buisnessSection{
+    margin-top: 8%;
+
+}
+.buisnessContent{
+    padding-left: 2%;
 }
 
 .blockItems{
@@ -138,6 +203,8 @@ header{
 .videoDescription, .timeDescription, .privacyDescription{
     margin: auto;
     justify-content: center;
+    padding: 2%;
+    
 }
 
 .itemHeading{
@@ -166,6 +233,64 @@ header{
 #privacyIcon{
     background-color: rgb(253, 213, 157);
     color: rgb(255, 132, 0);
+}
+/* Chat Card css */
+.chatCard{
+    width: max-content;
+    height: 80%;
+    box-shadow: 0 -0.3em 1em rgba(30, 32, 30, 0.454);
+    border-radius: 5px;
+    padding: 10%;
+}
+.message{
+    display: flex;
+    gap: 20px;
+    
+}
+.message > img{
+    width: 45px;
+    height: 45px;
+}
+.textBox{
+    width: max-content;
+    background-color: rgba(128, 128, 128, 0.283);
+    border-radius: 5px;
+    padding: 7px;
+}
+.message2, .message3{
+    margin-top: 12%;
+}
+.textBox2{
+    background-color:#FB8E0B;
+    padding: 12px;
+}
+
+.wholeText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.chatBoxx{
+    color: rgba(128, 128, 128, 0.947);
+    border: 2px solid rgba(128, 128, 128, 0.226);
+    display: flex;
+    position: relative;
+    height: 13%;
+    padding: 3%;
+    margin-top: 9%;
+}
+.forwardIcon{
+    position: absolute;
+    right: 2%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.226);
+    height: max-content;
+    width: max-content;
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 /* new section */
@@ -263,16 +388,18 @@ header{
 
 /* footer text */
 .footerEnd{
-    
-    width: 100vw;
+    width: 95vw;
     display: flex;
-    padding: 25%;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin: 1vw;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 .footerText{
+    
     font-size: 25px;
     font-weight: 900;
     text-align: center;
@@ -283,7 +410,7 @@ header{
     width: max-content;
     padding: 8px;
     border-radius: 5px;
-    
+    cursor: pointer;
 }
 
 
@@ -316,11 +443,16 @@ footer{
 }
 
 .footerIcons{
+    text-decoration: none;
     color: #FB8E0B;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.footerIcons > a{
+    color: #FB8E0B;
 }
 
 hr{

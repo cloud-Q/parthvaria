@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.432);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -0.3em 1em rgba(30, 32, 30, 0.454);
+            background-color: whitesmoke;
+            border-radius: 10px;
+            width:max-content;
+            padding: 5%;
+            margin-top: 15%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px
+        }
+        #btn{
+            background-color: rgba(255, 166, 0, 0.377);
+            color: black;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-weight: bolder;
+            color: grey;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        .signup{
+            margin: 5%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <h1>Login</h1>
+    <form>
+        <div class="name">
+            <label for="name">UserName: </label>
+        <input type="text" id="name">
+        </div>
+        <div class="pass">
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+        </div>
+        <input type="submit" id="btn">
+    </form>
+    <div class="signup">
+        <span>new user</span>
+        <a href="#">sign up</a>
+    </div>
+</div>
+</body>
+</html>
